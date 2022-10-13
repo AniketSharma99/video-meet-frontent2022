@@ -21,7 +21,7 @@ const RoomPage = ({
       const siteUrl = window.location.origin;
       window.location.href = siteUrl;
     } else {
-      webRTCHandler.getLocalPreviewAndInitRoomConnection(
+      webRTCHandler.GetLocalPreviewAndInitRoomConnection(
         isRoomHost,
         identity,
         roomId,

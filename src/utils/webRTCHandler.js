@@ -12,7 +12,6 @@ const defaultConstraints = {
     height: "360",
   },
 };
-let history = useHistory();
 
 
 const onlyAudioConstraints = {
@@ -22,14 +21,14 @@ const onlyAudioConstraints = {
 
 let localStream;
 
-export const getLocalPreviewAndInitRoomConnection = async (
+export const GetLocalPreviewAndInitRoomConnection = async (
   isRoomHost,
   identity,
   roomId = null,
   onlyAudio
 ) => {
   await fetchTURNCredentials();
-
+  let history = useHistory();
   const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
 
   navigator.mediaDevices
@@ -49,11 +48,11 @@ export const getLocalPreviewAndInitRoomConnection = async (
     .catch((err) => {
       alert("Error occurred when trying to get an access to your Audio or Video devices")
       // window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
-           history.push("/");
-           console.log("I am here!!!!")
+      history.push("/");
+      console.log("I am here!!!!")
       // console.log(
       //   // "error occurred when trying to get an access to local stream"
-       
+
       // );
       // console.log(err);
     });
