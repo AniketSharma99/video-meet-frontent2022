@@ -3,6 +3,7 @@ import store from "../store/store";
 import * as wss from "./wss";
 import Peer from "simple-peer";
 import { fetchTURNCredentials, getTurnIceServers } from "./turn";
+import { useHistory } from "react-router-dom";
 
 const defaultConstraints = {
   audio: true,
@@ -11,6 +12,8 @@ const defaultConstraints = {
     height: "360",
   },
 };
+let history = useHistory();
+
 
 const onlyAudioConstraints = {
   audio: true,
@@ -45,7 +48,9 @@ export const getLocalPreviewAndInitRoomConnection = async (
     })
     .catch((err) => {
       alert("Error occurred when trying to get an access to your Audio or Video devices")
-      window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
+      // window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
+           history.push("/");
+           console.log("I am here!!!!")
       // console.log(
       //   // "error occurred when trying to get an access to local stream"
        
