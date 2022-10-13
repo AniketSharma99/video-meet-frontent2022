@@ -38,7 +38,7 @@ const NewMessage = () => {
       <img
         className="new_message_button"
         src={SendMessageButton}
-        onClick={sendMessage}
+        onClick={sendMessage} alt="img"
       />
     </div>
   );

@@ -9,12 +9,13 @@ import "./IntroductionPage.css";
 const IntroductionPage = ({ setIsRoomHostAction }) => {
   useEffect(() => {
     setIsRoomHostAction(false);
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="introduction_page_container">
       <div className="introduction_page_panel">
-        <img src={logo} className="introduction_page_image"></img>
+        <img src={logo} className="introduction_page_image" alt="img"></img>
         <ConnectingButtons />
       </div>
     </div>

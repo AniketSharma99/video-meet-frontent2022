@@ -28,6 +28,7 @@ const RoomPage = ({
         connectOnlyWithAudio
       );
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

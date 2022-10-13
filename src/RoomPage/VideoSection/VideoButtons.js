@@ -2,7 +2,7 @@ import React from "react";
 import CameraButton from "./CameraButton";
 import LeaveRoomButton from "./LeaveRoomButton";
 import MicButton from "./MicButton";
-import SwitchToScreenSharingButton from "./SwitchToScreenSharingButton";
+// import SwitchToScreenSharingButton from "./SwitchToScreenSharingButton";
 import { connect } from "react-redux";
 
 const VideoButtons = (props) => {
