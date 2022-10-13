@@ -3,13 +3,15 @@ import { setRoomId, setParticipants, setSocketId } from "../store/actions";
 import store from "../store/store";
 import * as webRTCHandler from "./webRTCHandler";
 import { appendNewMessageToChatHistory } from "./directMessages";
+import {environment} from "../environment/environment"
 
-const SERVER = "https://video-meeting-backend2022.herokuapp.com/";
+
+// const SERVER = "https://video-meeting-backend2022.herokuapp.com/";
 
 let socket = null;
 
 export const connectWithSocketIOServer = () => {
-  socket = io(SERVER);
+  socket = io(environment.SERVER);
 
   socket.on("connect", () => {
     console.log("successfully connected with socket io server");
