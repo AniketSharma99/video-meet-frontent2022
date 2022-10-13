@@ -44,10 +44,12 @@ export const getLocalPreviewAndInitRoomConnection = async (
         : wss.joinRoom(identity, roomId, onlyAudio);
     })
     .catch((err) => {
-      console.log(
-        "error occurred when trying to get an access to local stream"
-      );
-      console.log(err);
+      alert("Error occurred when trying to get an access to your Audio or Video devices")
+      // console.log(
+      //   // "error occurred when trying to get an access to local stream"
+       
+      // );
+      // console.log(err);
     });
 };
 
