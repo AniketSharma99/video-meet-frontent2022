@@ -3,7 +3,7 @@ import store from "../store/store";
 import * as wss from "./wss";
 import Peer from "simple-peer";
 import { fetchTURNCredentials, getTurnIceServers } from "./turn";
-import { useHistory } from "react-router-dom";
+
 
 const defaultConstraints = {
   audio: true,
