@@ -45,6 +45,7 @@ export const getLocalPreviewAndInitRoomConnection = async (
     })
     .catch((err) => {
       alert("Error occurred when trying to get an access to your Audio or Video devices")
+      window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
       // console.log(
       //   // "error occurred when trying to get an access to local stream"
        
