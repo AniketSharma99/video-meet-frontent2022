@@ -32,7 +32,7 @@ export const GetLocalPreviewAndInitRoomConnection = async (
   // let history = useHistory();
   const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
  navigator.mediaDevices
-    .getUserMedia(constraints)
+    .getUserMedia(constraints)  
     .then((stream) => {
       console.log("successfuly received local stream");
       localStream = stream;

@@ -32,13 +32,14 @@ const RoomPage = ({
         connectOnlyWithAudio
       )
       console.log(valid);  
-      if(!valid){
-        setShow(true)
-      }
     }
-    
     // eslint-disable-next-line
   }, []);
+useEffect(()=>{
+  if(!valid){
+    setShow(true)
+  }
+},[valid])
 
   return (
     <div className="room_container">
