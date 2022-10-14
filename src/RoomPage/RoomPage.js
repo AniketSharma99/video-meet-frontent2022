@@ -39,7 +39,7 @@ useEffect(()=>{
   if(!valid && !connectOnlyWithAudio){
     setShow(true)
   }
-},[valid])
+},[valid,connectOnlyWithAudio])
 
   return (
     <div className="room_container">
