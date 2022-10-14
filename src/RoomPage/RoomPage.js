@@ -36,7 +36,7 @@ const RoomPage = ({
     // eslint-disable-next-line
   }, []);
 useEffect(()=>{
-  if(!valid){
+  if(!valid && !connectOnlyWithAudio){
     setShow(true)
   }
 },[valid])
