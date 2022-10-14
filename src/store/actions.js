@@ -8,7 +8,8 @@ const Actions = {
   SET_MESSAGES: "SET_MESSAGES",
   SET_ACTIVE_CONVERSATION: 'SET_ACTIVE_CONVERSATION',
   SET_DIRECT_CHAT_HISTORY: 'SET_DIRECT_CHAT_HISTORY',
-  SET_SOCKET_ID: 'SET_SOCKET_ID'
+  SET_SOCKET_ID: 'SET_SOCKET_ID',
+  SET_VALID:'SET_VALID'
 };
 
 export const setIsRoomHost = (isRoomHost) => {
@@ -45,6 +46,13 @@ export const setShowOverlay = (showOverlay) => {
     showOverlay,
   };
 };
+export const setValid = (text) => {
+  return {
+    type: 'SET_VALID',
+    text,
+  };
+};
+
 
 export const setParticipants = (participants) => {
   return {

@@ -10,7 +10,8 @@ const initState = {
   messages: [],
   activeConversation: null,
   directChatHistory: [],
-  socketId: null
+  socketId: null,
+  valid:true
 };
 
 const reducer = (state = initState, action) => {
@@ -40,6 +41,11 @@ const reducer = (state = initState, action) => {
         ...state,
         showOverlay: action.showOverlay,
       };
+      case 'SET_VALID':
+        return {
+          ...state,
+          valid: action.text,
+        };
     case Actions.SET_PARTICIPANTS:
       return {
         ...state,
@@ -50,6 +56,7 @@ const reducer = (state = initState, action) => {
         ...state,
         messages: action.messages,
       };
+      
     case Actions.SET_ACTIVE_CONVERSATION:
       return {
         ...state,

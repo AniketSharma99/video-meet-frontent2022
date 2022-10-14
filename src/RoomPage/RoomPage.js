@@ -16,6 +16,7 @@ const RoomPage = ({
   isRoomHost,
   showOverlay,
   connectOnlyWithAudio,
+  valid
 }) => {
   const [show, setShow] = useState(false)
 
@@ -24,21 +25,18 @@ const RoomPage = ({
       const siteUrl = window.location.origin;
       window.location.href = siteUrl;
     } else {
-      // webRTCHandler.GetLocalPreviewAndInitRoomConnection(
-      //   isRoomHost,
-      //   identity,
-      //   roomId,
-      //   connectOnlyWithAudio
-      // );
-      if(webRTCHandler.GetLocalPreviewAndInitRoomConnection(
+     webRTCHandler.GetLocalPreviewAndInitRoomConnection(
         isRoomHost,
         identity,
         roomId,
         connectOnlyWithAudio
-      )==="error"){
+      )
+      console.log(valid);  
+      if(!valid){
         setShow(true)
       }
     }
+    
     // eslint-disable-next-line
   }, []);
 

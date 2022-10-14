@@ -1,4 +1,4 @@
-import { setShowOverlay, setMessages } from "../store/actions";
+import { setShowOverlay, setMessages,setValid } from "../store/actions";
 import store from "../store/store";
 import * as wss from "./wss";
 import Peer from "simple-peer";
@@ -31,8 +31,7 @@ export const GetLocalPreviewAndInitRoomConnection = async (
 
   // let history = useHistory();
   const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
-
-  navigator.mediaDevices
+ navigator.mediaDevices
     .getUserMedia(constraints)
     .then((stream) => {
       console.log("successfuly received local stream");
@@ -40,14 +39,19 @@ export const GetLocalPreviewAndInitRoomConnection = async (
       showLocalVideoPreview(localStream);
       // dispatch an action to hide overlay
       store.dispatch(setShowOverlay(false));
+     
 
+      
       isRoomHost
         ? wss.createNewRoom(identity, onlyAudio)
         : wss.joinRoom(identity, roomId, onlyAudio);
+       
     })
     .catch((err) => {
-      if(err) return "error"
+     console.log(err)
+     store.dispatch(setValid(false));
     });
+   
 
 };
 
