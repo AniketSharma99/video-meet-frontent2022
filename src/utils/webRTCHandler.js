@@ -47,14 +47,7 @@ export const GetLocalPreviewAndInitRoomConnection = async (
     })
     .catch((err) => {
       alert("Error occurred when trying to get an access to your Audio or Video devices")
-      // window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
-      // history.push("/");
-      console.log("I am here!!!!")
-      // console.log(
-      //   // "error occurred when trying to get an access to local stream"
-
-      // );
-      // console.log(err);
+     if(err)window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
     });
 };
 

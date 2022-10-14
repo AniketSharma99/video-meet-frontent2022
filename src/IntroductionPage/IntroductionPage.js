@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../resources/images/logo.png";
+import Mu from "../resources/images/Mu.png"
 import ConnectingButtons from "./ConnectingButtons";
 import { connect } from "react-redux";
 import { setIsRoomHost } from "../store/actions";
@@ -15,7 +15,7 @@ const IntroductionPage = ({ setIsRoomHostAction }) => {
   return (
     <div className="introduction_page_container">
       <div className="introduction_page_panel">
-        <img src={logo} className="introduction_page_image" alt="img"></img>
+        <img src={Mu} className="introduction_page_image" alt="img"></img>
         <ConnectingButtons />
       </div>
     </div>
