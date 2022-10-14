@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import ChatSection from "./ChatSection/ChatSection";
 import ParticipantsSection from "./ParticipantsSection/ParticipantsSection";
 import VideoSection from "./VideoSection/VideoSection";
@@ -6,7 +6,7 @@ import RoomLabel from "./RoomLabel";
 import { connect } from "react-redux";
 import * as webRTCHandler from "../utils/webRTCHandler";
 import Overlay from "./Overlay";
-import { ErrorComponent } from "../utils/webRTCHandler";
+import ErrorPopup from "../Popup/ErrorPopup";
 
 import "./RoomPage.css";
 
@@ -17,17 +17,27 @@ const RoomPage = ({
   showOverlay,
   connectOnlyWithAudio,
 }) => {
+  const [show, setShow] = useState(false)
+
   useEffect(() => {
     if (!isRoomHost && !roomId) {
       const siteUrl = window.location.origin;
       window.location.href = siteUrl;
     } else {
-      webRTCHandler.GetLocalPreviewAndInitRoomConnection(
+      // webRTCHandler.GetLocalPreviewAndInitRoomConnection(
+      //   isRoomHost,
+      //   identity,
+      //   roomId,
+      //   connectOnlyWithAudio
+      // );
+      if(webRTCHandler.GetLocalPreviewAndInitRoomConnection(
         isRoomHost,
         identity,
         roomId,
         connectOnlyWithAudio
-      );
+      )==="error"){
+        setShow(true)
+      }
     }
     // eslint-disable-next-line
   }, []);
@@ -35,7 +45,7 @@ const RoomPage = ({
   return (
     <div className="room_container">
       <ParticipantsSection />
-      <ErrorComponent />
+      <ErrorPopup isOpen={show}/>
       <VideoSection />
       <ChatSection />
       <RoomLabel roomId={roomId} />
