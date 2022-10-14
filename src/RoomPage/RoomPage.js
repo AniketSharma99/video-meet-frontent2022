@@ -6,6 +6,7 @@ import RoomLabel from "./RoomLabel";
 import { connect } from "react-redux";
 import * as webRTCHandler from "../utils/webRTCHandler";
 import Overlay from "./Overlay";
+import { ErrorComponent } from "../utils/webRTCHandler";
 
 import "./RoomPage.css";
 
@@ -34,6 +35,7 @@ const RoomPage = ({
   return (
     <div className="room_container">
       <ParticipantsSection />
+      <ErrorComponent />
       <VideoSection />
       <ChatSection />
       <RoomLabel roomId={roomId} />

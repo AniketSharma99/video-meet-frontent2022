@@ -3,6 +3,8 @@ import store from "../store/store";
 import * as wss from "./wss";
 import Peer from "simple-peer";
 import { fetchTURNCredentials, getTurnIceServers } from "./turn";
+import ErrorPopup from "../Popup/ErrorPopup"
+import React,{useState,useEffect} from "react";
 
 
 const defaultConstraints = {
@@ -12,6 +14,32 @@ const defaultConstraints = {
     height: "360",
   },
 };
+
+
+localStorage.setItem("id",false)
+
+
+export const ErrorComponent = () =>{
+  const [show,setShow] =useState(false)
+  let val= localStorage.getItem("id")
+
+
+  useEffect(()=>{
+  let aj= localStorage.getItem("id")
+
+      if(aj==="true"){
+        setShow(true)
+      }
+  },[val])
+
+return(
+  <>
+ <ErrorPopup isOpen={show} />
+  
+  </>
+)
+
+}
 
 
 const onlyAudioConstraints = {
@@ -28,6 +56,7 @@ export const GetLocalPreviewAndInitRoomConnection = async (
   onlyAudio
 ) => {
   await fetchTURNCredentials();
+
   // let history = useHistory();
   const constraints = onlyAudio ? onlyAudioConstraints : defaultConstraints;
 
@@ -46,9 +75,9 @@ export const GetLocalPreviewAndInitRoomConnection = async (
         : wss.joinRoom(identity, roomId, onlyAudio);
     })
     .catch((err) => {
-      alert("Error occurred when trying to get an access to your Audio or Video devices")
-     if(err)window.location.href="https://eclectic-buttercream-298f4c.netlify.app"
+     if(err) localStorage.setItem("id",true)
     });
+   
 };
 
 let peers = {};
