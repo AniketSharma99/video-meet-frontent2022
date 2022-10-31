@@ -348,6 +348,7 @@ video {
   width: 100%;
   height: 100%;
   position: relative;
+  transform: rotateY(180deg);
 }
 
 .video_track_container:first-child:nth-last-child(2),
@@ -355,6 +356,7 @@ video {
   width: 50%;
   height: 50%;
   position: relative;
+  transform: rotateY(180deg);
 }
 
 .video_track_container:first-child:nth-last-child(3),
@@ -362,6 +364,7 @@ video {
   width: 50%;
   height: 50%;
   position: relative;
+  transform: rotateY(180deg);
 }
 
 .video_track_container:first-child:nth-last-child(4),
@@ -369,6 +372,9 @@ video {
   width: 50%;
   height: 50%;
   position: relative;
+  transform: rotateY(180deg);
+
+  
 }
 
 .video_track_container:first-child:nth-last-child(5),
@@ -376,30 +382,40 @@ video {
   width: 33%;
   height: 33%;
   position: relative;
+  transform: rotateY(180deg);
+
 }
 
 .video_track_container:first-child:nth-last-child(6),
 .video_track_container:first-child:nth-last-child(6) ~ .video_track_container {
   width: 33%;
   height: 33%;
+  transform: rotateY(180deg);
+
 }
 
 .video_track_container:first-child:nth-last-child(7),
 .video_track_container:first-child:nth-last-child(7) ~ .video_track_container {
   width: 33%;
   height: 33%;
+  transform: rotateY(180deg);
+
 }
 
 .video_track_container:first-child:nth-last-child(8),
 .video_track_container:first-child:nth-last-child(8) ~ .video_track_container {
   width: 33%;
   height: 33%;
+  transform: rotateY(180deg);
+
 }
 
 .video_track_container:first-child:nth-last-child(9),
 .video_track_container:first-child:nth-last-child(9) ~ .video_track_container {
   width: 33%;
   height: 33%;
+  transform: rotateY(180deg);
+
 }
 
 .video_section_container {
