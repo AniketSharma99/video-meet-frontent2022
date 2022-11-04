@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import JoinRoomInputs from "./JoinRoomInputs";
 import { connect } from "react-redux";
 import OnlyWithAudioCheckbox from "./OnlyWithAudioCheckbox";
@@ -11,6 +11,8 @@ import ErrorMessage from "./ErrorMessage";
 import JoinRoomButtons from "./JoinRoomButtons";
 import { useHistory } from "react-router-dom";
 import { getRoomExists } from "../utils/api";
+import { useLocation } from "react-router-dom";
+
 
 const JoinRoomContent = (props) => {
   const {
@@ -26,6 +28,9 @@ const JoinRoomContent = (props) => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const history = useHistory();
+  const { search } = useLocation();
+  const id = search.slice(4)
+  // console.log("jdwhvcujehvhcuwevfvhi",roomIdValue);
 
   const handleJoinRoom = async () => {
     setIdentityAction(nameValue);
@@ -35,6 +40,12 @@ const JoinRoomContent = (props) => {
       await joinRoom();
     }
   };
+  
+  useEffect(() => {
+    if(id){
+      setRoomIdValue(id)
+    }
+  },[id])
 
   const joinRoom = async () => {
     const responseMessage = await getRoomExists(roomIdValue);
@@ -61,6 +72,7 @@ const JoinRoomContent = (props) => {
   return (
     <>
       <JoinRoomInputs
+        id={id}
         roomIdValue={roomIdValue}
         setRoomIdValue={setRoomIdValue}
         nameValue={nameValue}

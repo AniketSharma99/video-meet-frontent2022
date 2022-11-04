@@ -19,7 +19,6 @@ const RoomPage = ({
   valid
 }) => {
   const [show, setShow] = useState(false)
-
   useEffect(() => {
     if (!isRoomHost && !roomId) {
       const siteUrl = window.location.origin;
