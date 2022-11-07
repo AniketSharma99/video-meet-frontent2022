@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import * as webRTCHandler from "../utils/webRTCHandler";
 import Overlay from "./Overlay";
 import ErrorPopup from "../Popup/ErrorPopup";
-
 import "./RoomPage.css";
 
 const RoomPage = ({
@@ -16,9 +15,11 @@ const RoomPage = ({
   isRoomHost,
   showOverlay,
   connectOnlyWithAudio,
-  valid
+  valid,
+  showChat,
+  showParticipants
 }) => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   useEffect(() => {
     if (!isRoomHost && !roomId) {
       const siteUrl = window.location.origin;
@@ -34,18 +35,25 @@ const RoomPage = ({
     }
     // eslint-disable-next-line
   }, []);
+
 useEffect(()=>{
   if(!valid && !connectOnlyWithAudio){
     setShow(true)
   }
 },[valid,connectOnlyWithAudio])
 
+
+window.addEventListener('popstate', function(){
+  		window.location.reload()
+  	}, false);
+  
+ 
   return (
     <div className="room_container">
-      <ParticipantsSection />
+      { showParticipants && <ParticipantsSection />}
       <ErrorPopup isOpen={show}/>
       <VideoSection />
-      <ChatSection />
+      {showChat && <ChatSection />}
       <RoomLabel roomId={roomId} />
       {showOverlay && <Overlay />}
     </div>

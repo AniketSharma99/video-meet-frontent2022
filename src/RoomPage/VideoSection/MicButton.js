@@ -17,7 +17,7 @@ const MicButton = () => {
       <img
         src={isMicMuted ? MicButtonImgOff : MicButtonImg}
         onClick={handleMicButtonPressed}
-        className="video_button_image"
+        className={`video_button_image${isMicMuted?"-active":""}`}
         alt="img"
       />
     </div>

@@ -5,16 +5,23 @@ import MicButton from "./MicButton";
 // import SwitchToScreenSharingButton from "./SwitchToScreenSharingButton";
 import { connect } from "react-redux";
 import SwitchToScreenSharingButton from "./SwitchToScreenSharingButton";
+import ParticipantsBtn from "./ParticipantsBtn";
+import ChatBtn from "./ChatBtn";
+import Morebtn from "./Morebtn";
+
 
 const VideoButtons = (props) => {
   const { connectOnlyWithAudio } = props;
 
   return (
     <div className="video_buttons_container">
+      <ParticipantsBtn/>
       <MicButton />
       {!connectOnlyWithAudio && <CameraButton />}
       <LeaveRoomButton />
       {!connectOnlyWithAudio && <SwitchToScreenSharingButton />}
+      <ChatBtn/>
+      <Morebtn/>
       {/* <button>chat</button> */}
     </div>
   );

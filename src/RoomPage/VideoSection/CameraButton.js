@@ -17,7 +17,7 @@ const CameraButton = () => {
     <div className="video_button_container">
       <img
         src={isLocalVideoDisabled ? CameraButtonImgOff : CameraButtonImg}
-        className="video_button_image"
+        className={`video_button_image${isLocalVideoDisabled?"-active":""}`}
         onClick={handleCameraButtonPressed}
         alt="cam"
       />

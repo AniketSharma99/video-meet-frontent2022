@@ -6,9 +6,12 @@ import Participants from "./Participants";
 const ParticipantsSection = () => {
   return (
     <div className="participants_section_container">
+      <div className="participation-wrapper">
       <ParticipantsLabel />
       <Participants />
       {/* <DirectChat /> */}
+      </div>
+     
     </div>
   );
 };

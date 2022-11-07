@@ -6,9 +6,11 @@ import NewMessage from "./NewMessage";
 const ChatSection = () => {
   return (
     <div className="chat_section_container">
-      <ChatLabel />
+    <div className="chat-wrapper">
+    <ChatLabel />
       <Messages />
       <NewMessage />
+    </div>
     </div>
   );
 };

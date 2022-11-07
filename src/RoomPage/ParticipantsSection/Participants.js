@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setActiveConversation } from "../../store/actions";
+import Profile from "../../resources/images/Icons/Profile.svg"
 
 const SingleParticipant = (props) => {
   const {
@@ -20,6 +21,11 @@ const SingleParticipant = (props) => {
   return (
     <>
       <p className="participants_paragraph" onClick={handleOpenActiveChatbox}>
+        <img
+          src={Profile}
+          alt="img"
+        />
+        
         {identity}
       </p>
       {!lastItem && <span className="participants_separator_line"></span>}

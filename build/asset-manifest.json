@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.3514d64a.chunk.css",
-    "main.js": "/static/js/main.6698eb2c.chunk.js",
-    "main.js.map": "/static/js/main.6698eb2c.chunk.js.map",
+    "main.css": "/static/css/main.faea907b.chunk.css",
+    "main.js": "/static/js/main.1856a0b7.chunk.js",
+    "main.js.map": "/static/js/main.1856a0b7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8da668d5.js",
     "runtime-main.js.map": "/static/js/runtime-main.8da668d5.js.map",
-    "static/js/2.a08dde87.chunk.js": "/static/js/2.a08dde87.chunk.js",
-    "static/js/2.a08dde87.chunk.js.map": "/static/js/2.a08dde87.chunk.js.map",
+    "static/js/2.3e6c8ef1.chunk.js": "/static/js/2.3e6c8ef1.chunk.js",
+    "static/js/2.3e6c8ef1.chunk.js.map": "/static/js/2.3e6c8ef1.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3514d64a.chunk.css.map": "/static/css/main.3514d64a.chunk.css.map",
-    "static/js/2.a08dde87.chunk.js.LICENSE.txt": "/static/js/2.a08dde87.chunk.js.LICENSE.txt",
+    "static/css/main.faea907b.chunk.css.map": "/static/css/main.faea907b.chunk.css.map",
+    "static/js/2.3e6c8ef1.chunk.js.LICENSE.txt": "/static/js/2.3e6c8ef1.chunk.js.LICENSE.txt",
+    "static/media/More2.b44ff397.svg": "/static/media/More2.b44ff397.svg",
+    "static/media/Profile.965ae5d3.svg": "/static/media/Profile.965ae5d3.svg",
     "static/media/camera.b50348a3.svg": "/static/media/camera.b50348a3.svg",
     "static/media/cameraOff.a61d4a02.svg": "/static/media/cameraOff.a61d4a02.svg",
     "static/media/mic.c9c9788e.svg": "/static/media/mic.c9c9788e.svg",
     "static/media/micOff.3a72f682.svg": "/static/media/micOff.3a72f682.svg",
-    "static/media/sendMessageButton.9add4f6d.svg": "/static/media/sendMessageButton.9add4f6d.svg",
-    "static/media/switchToScreenSharing.900d9338.svg": "/static/media/switchToScreenSharing.900d9338.svg"
+    "static/media/screenshare.c3c926be.svg": "/static/media/screenshare.c3c926be.svg",
+    "static/media/sendMessageButton.9add4f6d.svg": "/static/media/sendMessageButton.9add4f6d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8da668d5.js",
-    "static/js/2.a08dde87.chunk.js",
-    "static/css/main.3514d64a.chunk.css",
-    "static/js/main.6698eb2c.chunk.js"
+    "static/js/2.3e6c8ef1.chunk.js",
+    "static/css/main.faea907b.chunk.css",
+    "static/js/main.1856a0b7.chunk.js"
   ]
 }

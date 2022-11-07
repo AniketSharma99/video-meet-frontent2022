@@ -11,7 +11,9 @@ const initState = {
   activeConversation: null,
   directChatHistory: [],
   socketId: null,
-  valid:true
+  valid:true,
+  showChat:false,
+  showParticipants:false
 };
 
 const reducer = (state = initState, action) => {
@@ -72,6 +74,16 @@ const reducer = (state = initState, action) => {
         ...state,
         socketId: action.socketId
       }
+      case Actions.SET_SHOWCHAT:
+        return{
+          ...state,
+          showChat:action.showChat
+        }
+        case Actions.SET_SHOWPARTICIPANTS:
+        return{
+          ...state,
+          showParticipants:action.showParticipants
+        }
     default:
       return state;
   }

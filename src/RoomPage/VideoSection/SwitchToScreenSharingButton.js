@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SwitchImg from "../../resources/images/switchToScreenSharing.svg";
+import SwitchImg from "../../resources/images/Icons/screenshare.svg";
 import LocalScreenSharingPreview from "./LocalScreenSharingPreview";
 import * as webRTCHandler from "../../utils/webRTCHandler";
 
@@ -45,7 +45,7 @@ const SwitchToScreenSharingButton = () => {
         <img
           src={SwitchImg}
           onClick={handleScreenShareToggle}
-          className="video_button_image"
+          className={`video_button_image${isScreenSharingActive?"-active":""}`}
         alt="img"
         />
       </div>

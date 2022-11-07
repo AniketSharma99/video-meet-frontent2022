@@ -9,7 +9,9 @@ const Actions = {
   SET_ACTIVE_CONVERSATION: 'SET_ACTIVE_CONVERSATION',
   SET_DIRECT_CHAT_HISTORY: 'SET_DIRECT_CHAT_HISTORY',
   SET_SOCKET_ID: 'SET_SOCKET_ID',
-  SET_VALID:'SET_VALID'
+  SET_VALID:'SET_VALID',
+  SET_SHOWCHAT:"SET_SHOWCHAT",
+  SET_SHOWPARTICIPANTS:"SET_SHOWPARTICIPANTS"
 };
 
 export const setIsRoomHost = (isRoomHost) => {
@@ -86,6 +88,19 @@ export const setSocketId = (socketId) => {
   return {
     type: Actions.SET_SOCKET_ID,
     socketId
+  }
+}
+export const setShowChat =(showChat)=>{
+  return{
+    type:Actions.SET_SHOWCHAT,
+    showChat
+  }
+}
+
+export const setShowParticipants =(showParticipants)=>{
+  return{
+    type:Actions.SET_SHOWPARTICIPANTS,
+    showParticipants
   }
 }
 
