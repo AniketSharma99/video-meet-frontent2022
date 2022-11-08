@@ -21,10 +21,10 @@ const SingleParticipant = (props) => {
   return (
     <>
       <p className="participants_paragraph" onClick={handleOpenActiveChatbox}>
-        <img
+     <span>   <img
           src={Profile}
           alt="img"
-        />
+        /></span>
         
         {identity}
       </p>

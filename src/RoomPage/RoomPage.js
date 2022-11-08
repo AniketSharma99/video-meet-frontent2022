@@ -9,6 +9,7 @@ import Overlay from "./Overlay";
 import ErrorPopup from "../Popup/ErrorPopup";
 import "./RoomPage.css";
 
+
 const RoomPage = ({
   roomId,
   identity,
@@ -52,9 +53,9 @@ window.addEventListener('popstate', function(){
     <div className="room_container">
       { showParticipants && <ParticipantsSection />}
       <ErrorPopup isOpen={show}/>
-      <VideoSection />
+      <VideoSection roomId={roomId}  />
       {showChat && <ChatSection />}
-      <RoomLabel roomId={roomId} />
+      {/* <RoomLabel roomId={roomId} /> */}
       {showOverlay && <Overlay />}
     </div>
   );

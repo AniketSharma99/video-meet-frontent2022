@@ -10,8 +10,8 @@ import ChatBtn from "./ChatBtn";
 import Morebtn from "./Morebtn";
 
 
-const VideoButtons = (props) => {
-  const { connectOnlyWithAudio } = props;
+const VideoButtons = ({ connectOnlyWithAudio, roomId }) => {
+  // const { connectOnlyWithAudio } = props;
 
   return (
     <div className="video_buttons_container">
@@ -21,7 +21,7 @@ const VideoButtons = (props) => {
       <LeaveRoomButton />
       {!connectOnlyWithAudio && <SwitchToScreenSharingButton />}
       <ChatBtn/>
-      <Morebtn/>
+      <Morebtn  roomId={roomId}/>
       {/* <button>chat</button> */}
     </div>
   );

@@ -10,12 +10,13 @@
   width: 600px;
   height: 400px;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid black;
   filter: drop-shadow(0 0 0.2rem grey);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 5px 5px #fad133;
 }
 
 .introduction_page_image {
@@ -28,11 +29,11 @@
 }
 
 .join_room_button {
-  background-color: #2d8cff;
+  background-color: #fad133;
   border: 1px solid #e5e5e5;
-  color: white;
+  color: black;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   width: 180px;
   height: 60px;
   border-radius: 8px;
@@ -40,7 +41,7 @@
 }
 
 .join_room_button:hover {
-  background-color: blue;
+  background-color: #e5e5e5;
 }
 
 .create_room_button {
@@ -51,6 +52,7 @@
   font-size: 13px;
   width: 180px;
   height: 60px;
+  font-weight: 600;
   border-radius: 8px;
   transition: 0.3s;
 }

@@ -151,7 +151,7 @@ button{
 
 .loader {
   border: 16px solid #f3f3f3; 
-  border-top: 16px solid #4a4e51; 
+  border-top: 16px solid #fad133; 
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -190,8 +190,14 @@ button{
 }
 
 .participants_paragraph:hover {
-  background-color: #e5e5e5;
+  background-color: #feeeb3;
   border-radius: 8px;
+  border: 2px solid #fad133;
+}
+.participants_paragraph span{
+
+    margin-right: 10px;
+ 
 }
 
 .participants_separator_line {
@@ -254,6 +260,7 @@ button{
 }
 
 .video_buttons_container {
+  z-index: 99;
  width: 50%;
     height: 10%;
     display: flex;
@@ -282,17 +289,17 @@ button{
 }
 
 .video_button_image:hover {
-  background: black;
+  background: #fad133;
   padding: 10px;
   border-radius: 25px;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 .video_button_image-active{
   height: 80%;
   padding: 10px;
   border-radius: 25px;
-  background: black;
-  opacity: 0.5;
+  background:#fad133 ;
+  /* opacity: 0.5; */
 }
 
 
@@ -483,26 +490,27 @@ video {
 .full_screen {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0%;
   left: 0%;
 }
 
 .label_only_audio_container {
   width: 100%;
-  height: 100%;
- 
+  height: 82%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0%;
+  top: 13%;
   left: 0%;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .label_only_audio_container {
   font-size: 18px;
-  color: black;
+  color: white;
 }
 
 .direct_chat_container {
@@ -603,4 +611,33 @@ video {
   margin-bottom: 5px;
   font-size: 14px;
   margin-right: 5px;
+}
+.more-dropdown{
+  position: relative;
+}
+.more-options{
+  position: absolute;
+  width: 179px;
+  background: #ffff;
+  border: 1px solid #fad133;
+  bottom: 81px;
+  z-index: 99;
+  border-radius: 8px;
+  padding: 10px;
+
+}
+.more-options ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.more-options ul li{
+  padding: 10px;
+  /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+  border: 1px solid transparent;
+}
+.more-options ul li:hover{
+  border:1px solid #fad133;
+  background: #feeeb3;
+border-radius: 8px;
 }
