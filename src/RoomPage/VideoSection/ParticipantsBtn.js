@@ -57,7 +57,7 @@ const ParticipantsBtn = ({ showParticipants }) => {
                     </rect></clipPath></defs></svg> */}
             <svg className={`video_button_image${showParticipants?"-active":""}`} width="22px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg" throwIfNamespace={false}>
 
-                <title>group</title>
+                <title>Participants</title>
                 <desc>Created with Sketch.</desc>
                 <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Rounded" transform="translate(-611.000000, -4103.000000)">

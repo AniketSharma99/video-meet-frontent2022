@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.579a6d36.chunk.css",
-    "main.js": "/static/js/main.5e5a7791.chunk.js",
-    "main.js.map": "/static/js/main.5e5a7791.chunk.js.map",
+    "main.js": "/static/js/main.020475db.chunk.js",
+    "main.js.map": "/static/js/main.020475db.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8da668d5.js",
     "runtime-main.js.map": "/static/js/runtime-main.8da668d5.js.map",
     "static/js/2.8882ffbe.chunk.js": "/static/js/2.8882ffbe.chunk.js",
@@ -16,13 +16,13 @@
     "static/media/cameraOff.a61d4a02.svg": "/static/media/cameraOff.a61d4a02.svg",
     "static/media/mic.c9c9788e.svg": "/static/media/mic.c9c9788e.svg",
     "static/media/micOff.3a72f682.svg": "/static/media/micOff.3a72f682.svg",
-    "static/media/screenshare.c3c926be.svg": "/static/media/screenshare.c3c926be.svg",
+    "static/media/screenshare.263276ee.svg": "/static/media/screenshare.263276ee.svg",
     "static/media/sendMessageButton.9add4f6d.svg": "/static/media/sendMessageButton.9add4f6d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8da668d5.js",
     "static/js/2.8882ffbe.chunk.js",
     "static/css/main.579a6d36.chunk.css",
-    "static/js/main.5e5a7791.chunk.js"
+    "static/js/main.020475db.chunk.js"
   ]
 }
