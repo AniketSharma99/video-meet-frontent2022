@@ -60,7 +60,7 @@ let streams = [];
 
 const getConfiguration = () => {
   const turnIceServers = getTurnIceServers();
-
+ console.log("turnIceServers",turnIceServers)
   if (turnIceServers) {
     return {
       iceServers: [
@@ -72,6 +72,7 @@ const getConfiguration = () => {
     };
   } else {
     console.warn("Using only STUN server");
+    console.log("turnIceServers",turnIceServers)
     return {
       iceServers: [
         {
