@@ -25,7 +25,8 @@ export const GetLocalPreviewAndInitRoomConnection = async (
   isRoomHost,
   identity,
   roomId = null,
-  onlyAudio
+  onlyAudio,
+  hostId
 ) => {
   await fetchTURNCredentials();
 
@@ -43,7 +44,7 @@ export const GetLocalPreviewAndInitRoomConnection = async (
 
       
       isRoomHost
-        ? wss.createNewRoom(identity, onlyAudio)
+        ? wss.createNewRoom(identity, onlyAudio,hostId)
         : wss.joinRoom(identity, roomId, onlyAudio);
        
     })

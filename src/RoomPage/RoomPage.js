@@ -17,7 +17,8 @@ const RoomPage = ({
   connectOnlyWithAudio,
   valid,
   showChat,
-  showParticipants
+  showParticipants,
+  hostId
 }) => {
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -29,7 +30,8 @@ const RoomPage = ({
         isRoomHost,
         identity,
         roomId,
-        connectOnlyWithAudio
+        connectOnlyWithAudio,
+        hostId
       )
       console.log(valid);  
     }

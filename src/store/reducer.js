@@ -11,9 +11,10 @@ const initState = {
   activeConversation: null,
   directChatHistory: [],
   socketId: null,
-  valid:true,
-  showChat:false,
-  showParticipants:false
+  valid: true,
+  showChat: false,
+  showParticipants: false,
+  hostId: null
 };
 
 const reducer = (state = initState, action) => {
@@ -43,11 +44,11 @@ const reducer = (state = initState, action) => {
         ...state,
         showOverlay: action.showOverlay,
       };
-      case 'SET_VALID':
-        return {
-          ...state,
-          valid: action.text,
-        };
+    case 'SET_VALID':
+      return {
+        ...state,
+        valid: action.text,
+      };
     case Actions.SET_PARTICIPANTS:
       return {
         ...state,
@@ -58,7 +59,7 @@ const reducer = (state = initState, action) => {
         ...state,
         messages: action.messages,
       };
-      
+
     case Actions.SET_ACTIVE_CONVERSATION:
       return {
         ...state,
@@ -74,16 +75,21 @@ const reducer = (state = initState, action) => {
         ...state,
         socketId: action.socketId
       }
-      case Actions.SET_SHOWCHAT:
-        return{
-          ...state,
-          showChat:action.showChat
-        }
-        case Actions.SET_SHOWPARTICIPANTS:
-        return{
-          ...state,
-          showParticipants:action.showParticipants
-        }
+    case Actions.SET_SHOWCHAT:
+      return {
+        ...state,
+        showChat: action.showChat
+      }
+    case Actions.SET_SHOWPARTICIPANTS:
+      return {
+        ...state,
+        showParticipants: action.showParticipants
+      }
+    case Actions.SET_HOST_ID:
+      return {
+        ...state,
+        hostId: action.hostId
+      }
     default:
       return state;
   }

@@ -11,7 +11,8 @@ const Actions = {
   SET_SOCKET_ID: 'SET_SOCKET_ID',
   SET_VALID:'SET_VALID',
   SET_SHOWCHAT:"SET_SHOWCHAT",
-  SET_SHOWPARTICIPANTS:"SET_SHOWPARTICIPANTS"
+  SET_SHOWPARTICIPANTS:"SET_SHOWPARTICIPANTS",
+  SET_HOST_ID:'SET_HOST_ID'
 };
 
 export const setIsRoomHost = (isRoomHost) => {
@@ -101,6 +102,13 @@ export const setShowParticipants =(showParticipants)=>{
   return{
     type:Actions.SET_SHOWPARTICIPANTS,
     showParticipants
+  }
+}
+
+export const setHostId =(hostId)=>{
+  return {
+    type: Actions.SET_HOST_ID,
+    hostId
   }
 }
 
