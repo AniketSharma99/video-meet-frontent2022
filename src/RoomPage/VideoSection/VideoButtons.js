@@ -8,6 +8,7 @@ import SwitchToScreenSharingButton from "./SwitchToScreenSharingButton";
 import ParticipantsBtn from "./ParticipantsBtn";
 import ChatBtn from "./ChatBtn";
 import Morebtn from "./Morebtn";
+import Recording from "./Recording";
 
 
 const VideoButtons = ({ connectOnlyWithAudio, roomId }) => {
@@ -21,6 +22,7 @@ const VideoButtons = ({ connectOnlyWithAudio, roomId }) => {
       <LeaveRoomButton />
       {!connectOnlyWithAudio && <SwitchToScreenSharingButton />}
       <ChatBtn/>
+      <Recording/>
       <Morebtn  roomId={roomId}/>
       {/* <button>chat</button> */}
     </div>
